@@ -1,0 +1,43 @@
+-- to create database
+create database edubridge;
+
+use edubridge;
+
+create table table1(rollno int primary key,name char(20), address varchar(30));
+
+alter table table1 add (email varchar(20));
+
+alter table table1 modify address char(10);
+
+alter table table1 drop column email;
+
+select * from table1;
+
+insert into table1 (rollno, name, address) values(1,"name1","address1");
+
+insert into table1 (rollno, name, address) values(2,"name2","address2");
+
+insert into table1 (rollno, name, address) values(3,"name3","address3");
+
+select * from table1;
+
+create table table2(t2id int primary key,rollno int, school char(20), schooladdress varchar(30));
+
+insert into table1 (t2id,rollno, school,schooladdress) values(101,1,"school","schooladdress1");
+
+insert into table1 (t2id,rollno, school,schooladdress) values(102,2,"school2","schooladdress2");
+
+insert into table1 (t2id,rollno, school,schooladdress) values(103,3,"school3","schooladdress3");
+
+select * from table2;
+
+update table1 set name= "name4" where rollno=2;
+
+delete from table2 where rollno=2;
+
+delete from table1 where rollno=2;
+
+select {rollno, name} from table1;
+
+select * from table2 where rollno=3 or school="school1";
+

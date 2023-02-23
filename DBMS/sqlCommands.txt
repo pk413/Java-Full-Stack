@@ -1,0 +1,50 @@
+create table loginInfo ( SrNo int(2), Name varchar(20), Password varchar (5) );
+
+select * from logininfo;
+
+create table loginInfo11 ( SrNo int(2), Name varchar(20), Password varchar (5) );
+
+drop table logininfo11;
+
+create database MyDB11;
+
+drop database mydb11;
+
+alter table logininfo Add column Address varchar(100);
+
+alter table logininfo Add column Address2 varchar(100);
+
+alter table logininfo drop column Address2;
+
+alter table logininfo modify column Address char(100);
+
+describe logininfo;
+
+alter table  logininfo rename to userInfo;
+
+alter table userinfo rename column address  to currentAddress;
+
+select * from City;
+
+select * from student;
+truncate student;
+select * from actor;
+select * from address;
+
+select district, city_id from address;
+select * from city;
+update city set country_id = 7 where city_id = 2;
+
+delete  from city where city_id = 4;
+
+select * from userinfo;
+insert into userinfo values (1, 'Dinesh' , '1234', 'Chennai');
+insert into userinfo values (2, 'Chandhini' , '1122', 'Chennai');
+insert into userinfo (srno, Name, CurrentAddress ) values (3, 'Haris' , 'Shrinagar');
+
+update userinfo set Password = '1111' where srno = 3;
+
+insert into userinfo values (2, 'Krishna' , '1122', 'Bangalore');
+insert into userinfo values (2, 'Khsitij' , '7788', 'Pune');
+
+delete  from userinfo where Name = 'Kshitij'; 
